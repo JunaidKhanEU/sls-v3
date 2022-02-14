@@ -1,0 +1,14 @@
+  hello:
+    name: ${self:service}-hello
+    handler: handler.hello
+    timeout: 30
+    events:
+      - http:
+          path: /hello
+          method: get
+          cors: true
+    iamRoleStatements:
+      - Effect: "Allow"
+        Action:
+          - lambda:InvokeFunction
+        Resource: "*"

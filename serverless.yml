@@ -1,0 +1,15 @@
+service: basics
+frameworkVersion: '3'
+
+plugins:
+  - serverless-plugin-typescript
+  - serverless-iam-roles-per-function
+provider:
+  name: aws
+  runtime: nodejs14.x
+  stage: ${opt:stage, 'dev'}
+  region: us-east-1
+
+functions:
+  hello: ${file(resources/hello.yml):hello}
+    
