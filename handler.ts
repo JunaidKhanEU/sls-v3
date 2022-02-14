@@ -1,7 +1,7 @@
 "use strict"
 
 module.exports.hello = async (event) => {
-  console.log("test", process.env.myStage)
+  console.log("test", process.env.keys)
   return {
     statusCode: 200,
     body: JSON.stringify(
