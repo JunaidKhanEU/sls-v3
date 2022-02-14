@@ -10,7 +10,11 @@ provider:
   runtime: nodejs14.x
   stage: ${opt:stage, 'dev'}
   region: us-east-1
-
+environment:
+  keys: ${self:custom:Test_Key}
+  myStage: ${sls.stage}
 functions:
   hello: ${file(resources/hello.yml):hello}
     
+custom:
+  Test_Key: "abcdefgh"
