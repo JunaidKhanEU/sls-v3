@@ -11,7 +11,7 @@ provider:
   stage: ${opt:stage, 'dev'}
   region: us-east-1
   environment:
-    keys: ${self:custom:Test_Key}
+    keys: ${self:custom.Test_Key}
     myStage: ${sls.stage}
 functions:
   hello: ${file(resources/hello.yml):hello}
