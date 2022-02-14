@@ -1,5 +1,5 @@
   hello:
-    name: ${self:service}-hello
+    name: ${self:provider.stage}-hello
     handler: handler.hello
     timeout: 30
     events:
