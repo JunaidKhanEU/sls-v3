@@ -1,5 +1,6 @@
 service: basics
 frameworkVersion: '3'
+app: aws-node
 
 plugins:
   - serverless-plugin-typescript
